@@ -26,9 +26,14 @@
             <!--HEADER-->
             <nav id="menu">
                 <ul>
-                    <li><a href="#Intro">Rys</a></li>
-                    <li><a href="#AboutMe">Sobre Mi</a></li>
-                    <li><a href="#Project">Proyectos</a></li>
-                    <li><a href="#Contact">Contactos</a></li>
+                    <li><a href="<?=url_root?>#Intro">Rys</a></li>
+                    <li><a href="<?=url_root?>#AboutMe">Sobre Mi</a></li>
+                    <li><a href="<?=url_root?>#Project">Proyectos</a></li>
+                    <li><a href="<?=url_root?>#Contact">Contactos</a></li>
+                    <li><a href="<?=url_content?>edit">Editar</a></li>
+                    <!--ADMIN-->
+                    <?php if(isset($_SESSION["admin"]) && $_SESSION["admin"]==USER_ADMIN):?>
+                    <li><a href="<?=url_content?>add">Agregar imagen</a></li>
+                    <?php endif; ?>
                 </ul>
             </nav>

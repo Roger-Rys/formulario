@@ -67,12 +67,32 @@ a{
     transform: scale(1.2);
     font-weight: bolder;
 }
-
+section{
+    margin: 0px auto; 
+    background: white;   
+}
+/*Edit*/
+.Edit{
+    padding-top: 90px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.Edit h2{
+    text-align: center;
+    font-size: 75px;
+}
+.Edit form{
+    display: flex;
+    flex-direction: column;    
+}
+.Edit label,input{
+   margin: 10px;
+   padding: 10px;
+}
 
 
 /*Intro*/
 .Intro{
-    padding: 90px 20px 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,7 +128,6 @@ a{
 
 /*AboutMe*/
 .AboutMe{
-    padding: 90px 20px 20px 20px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -149,7 +168,6 @@ a{
 
 /*Projects*/
 .Project{
-    padding: 90px 20px 20px 20px;    
     background: rgba(255, 255, 255, 0.85);
     min-height: 550px;
     align-items: center;
