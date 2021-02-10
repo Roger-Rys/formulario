@@ -154,19 +154,22 @@ a{
     min-height: 550px;
     align-items: center;
     justify-content: center;
+    margin: 0px auto; 
 }
 .Project h2 a{
     color: #999;
 }
 .Project a{
-    color:rgba(153, 153, 102,0.3);
+    color:rgba(153, 153, 102, 0.3);
+    text-align: center;
 }
 .Project ul{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-column-gap: 50px;
+    justify-content: center;
 }
 .Project ul li{
-    padding-right: 20px; 
     list-style: none; 
     margin: 0px auto;
 }
@@ -184,8 +187,6 @@ a{
 
 /*ContactMe*/
 .Contact{
-    padding: 90px 20px 20px 20px;    
-    min-height: 510px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -194,13 +195,14 @@ a{
 }
 .Contact h2{
     padding-top: 0px;    
-    padding-bottom: 100px; 
+    padding-bottom: 25px; 
 }
 .Contact ul{
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: center;
+    padding-bottom: 10px;
 }
 .Contact ul img{    
     height: 150px;
@@ -225,4 +227,59 @@ footer{
     margin: 0px auto;
     width: 88.5%;
     background: linear-gradient(rgba(0, 0, 0, 0),rgba(100, 100, 100, 0.8));
+}
+
+
+/*Resposive*/
+@media(max-width: 1200px){
+    /*Projects*/
+    .Project ul{
+        display: grid;
+        grid-template-columns: 350px 350px;
+        grid-template-rows: 300px 300px;
+        grid-column-gap: 20px;
+        justify-content: center;
+    }
+    .Project ul li a{
+        margin:0px auto;
+        text-align: center;
+    }
+}
+@media(max-width: 740px){
+    /*AboutMe*/
+    .AboutMe{
+        display: flex;
+        flex-direction: column;
+    }
+    .infoAboutMe{
+        width: 100%;
+    }
+    .skill{
+        padding: 10px;
+        width: 100%;
+    }
+    
+    /*Projects*/
+    .Project ul{
+        display: grid;
+        grid-template-columns: 150px;
+        grid-template-rows: 300px 300px 300px;
+        grid-column-gap: 20px;
+        justify-content: center;
+    }
+    .Project ul li a{
+        margin:0px auto;
+        text-align: center;
+    }
+    
+    /*ContactMe*/
+    .Contact{
+         min-height: auto;
+    }
+    .Contact ul{
+        display: grid;
+        grid-template-columns: 190px 190px;
+        grid-template-rows: 200px 200px;
+        justify-content: center;
+    }
 }
