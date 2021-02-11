@@ -12,36 +12,14 @@
     
     <div class="skill">
         <h2><a href="#AboutMe">Habilidades</a></h2>
-        <h3>Lenguajes de Marcado</h3>
+        <?php while ($datos = $result->fetch_assoc()):?>
+        
+        <h3><?=$datos["title"]?></h3>
         <ul>
-            <li>CSS Grid / Flex</li>
-            <li>HTML</li>
-        </ul>        
-        <h3>Lenguajes de programacion</h3>
-        <ul>
-            <li>PHP</li>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>Python</li>
-            <li>C#</li>
-        </ul>
-        <h3>Base de datos</h3>
-        <ul>
-            <li>SQL / MySQL</li>
-            <li>Mongoos</li>
-        </ul>
-        <h3>Librerias</h3>
-        <ul>
-            <li>Bootstrap</li>
-            <li>jQuery</li>
-        </ul>
-        <h3>Framework</h3>
-        <ul>
-            <li>node JS</li>
-            <li>Express</li>
-            <li>Laravel</li>
-            <li>Angular</li>
-        </ul>        
+            <li><?=$datos["description"]?></li>
+        </ul>  
+        <?php endwhile;?>
+                
     </div>  
     
 </div>

@@ -1,6 +1,11 @@
 <?php
 //Iniciar Sesion
 if(!isset($_SESSION)){ session_start(); }
+//Modelo
+require_once 'models/project.php';
+require_once 'models/aboutMe.php';
+require_once 'models/contact.php';
+
 include_once "config/parameters.php";
 include_once "views/include/header.php";
 include_once "autoload.php";
@@ -23,8 +28,15 @@ include_once "autoload.php";
                     ?>
                 </section>
             <?php break;?>
-    
-    
+            <?php case "add":?>
+                <!--Contenido: Edit-->
+                <section class="ContentCenter add">
+                    <?php
+                        $edit = new ProjectController();
+                        $edit->add();
+                    ?>
+                </section>    
+            <?php break;?>
              <!--Contenido: Error-->
             <?php default:?>
                 <section>
