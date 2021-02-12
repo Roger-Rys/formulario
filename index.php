@@ -19,21 +19,22 @@ include_once "autoload.php";
     <?php $contenido = $_GET["contenido"];
         Switch($contenido):
             
+            case "login":?>
+                <!--Contenido: Edit-->
+                <section class="ContentCenter login">
+                    <?php
+                        $login = new EditController();
+                        $login->index();
+                    ?>
+                </section>
+            <?php break;?>
+            <?php 
             case "edit":?>
                 <!--Contenido: Edit-->
                 <section class="ContentCenter edit">
                     <?php
                         $edit = new EditController();
-                        $edit->index();
-                    ?>
-                </section>
-            <?php break;?>
-            <?php case "add":?>
-                <!--Contenido: Edit-->
-                <section class="ContentCenter add">
-                    <?php
-                        $edit = new ProjectController();
-                        $edit->add();
+                        $edit->edit();
                     ?>
                 </section>    
             <?php break;?>
@@ -49,6 +50,8 @@ include_once "autoload.php";
     
         <?php endswitch; ?>
     
+             
+             
     <!--GET no contiene un valor-->
     <?php else:?>
         <!--Contenido: Intro-->

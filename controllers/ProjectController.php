@@ -9,9 +9,5 @@ class ProjectController{
        //Vista
        require_once 'views/project/projects.php';
     }
-    
-    public function add(){
-       require_once 'views/project/projects.php';
-    }
 }
 
