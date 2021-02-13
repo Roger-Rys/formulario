@@ -6,6 +6,8 @@ require_once 'models/project.php';
 require_once 'models/aboutMe.php';
 require_once 'models/contact.php';
 
+require_once 'models/connectiondb.php';
+
 include_once "config/parameters.php";
 include_once "views/include/header.php";
 include_once "autoload.php";
